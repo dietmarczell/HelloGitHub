@@ -2,7 +2,7 @@ import java.io.InputStream;
 
 public class Demo {
 
-	private static String zeichenkette = null;
+	private static String zeichenkette = "Czell Dietmar";
 
 	public static void main(String[] args) {
 
@@ -10,10 +10,9 @@ public class Demo {
 		char meinZeichen = 'X';
 		int numberLeafes = 0;
 		System.out.println("treeFront Boolean is \n <" + treeFront + "> \n");
-		System.out.println("My Leaf-Number is \n <" + numberLeafes + ">");
-		System.out.println(meinZeichen);
-		
-		
+		System.out.println("My Leaf-Number is \n <" + numberLeafes + ">\n");
+		System.out.println(meinZeichen+"\n");
+		System.out.println(zeichenkette);
 	}
 
 }
