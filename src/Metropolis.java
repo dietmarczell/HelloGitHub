@@ -7,7 +7,7 @@ public class Metropolis {
 		double MonatseinnahmenProPerson = 2_000;
 		boolean Hauptstadt = false;
 		
-		if (Hauptstadt == true)
+		if (Hauptstadt)
 			System.out.println("Die Hauptstadt mit "+Einwohner+" Einwohnern und "+MonatseinnahmenProPerson+"€ Monatseinnahmen pro Person ist eine Metropole ? ... "+isMetropolis(Hauptstadt,Einwohner,MonatseinnahmenProPerson));
 		else
 			System.out.println("Die Stadt mit "+Einwohner+" Einwohnern und "+MonatseinnahmenProPerson+"€ Monatseinnahmen pro Person ist eine Metropole ? ... "+isMetropolis(Hauptstadt,Einwohner,MonatseinnahmenProPerson));
@@ -18,7 +18,7 @@ public class Metropolis {
 		double Gesamtsteuern=taxPerPersonAndMonth*inhabitants*12;
 		System.out.println("Jahreseinnahmen: " + Gesamtsteuern);
 		
-		if ((isCapital == true) && (inhabitants > 100_000))
+		if (isCapital && (inhabitants > 100_000))
 		{
 			return true;
 		}
