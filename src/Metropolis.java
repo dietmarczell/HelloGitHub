@@ -16,7 +16,7 @@ public class Metropolis {
 	public static boolean isMetropolis(boolean isCapital, int inhabitants, double taxPerPersonAndMonth)
 	{
 		double Gesamtsteuern=taxPerPersonAndMonth*inhabitants*12;
-		System.out.println("Jahreseinnahmen: " + format.Gesamtsteuern);
+		System.out.println("Jahreseinnahmen: " + Gesamtsteuern);
 		
 		if ((isCapital == true) && (inhabitants > 100_000))
 		{
