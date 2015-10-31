@@ -1,7 +1,6 @@
-import java.io.InputStream;
 
 public class Demo {
-
+	// Berechnung der Grundrechnungsarten
 	private static String zeichenkette = "Czell Dietmar";
 
 	public static void main(String[] args) {
