@@ -31,6 +31,18 @@ public class Demo {
 		
 		System.out.println(a++); //post inkrement
 		System.out.println(++a); //pre inkrement
+		
+		int i=0;
+		while(i < 1)
+		{
+			i++;
+			System.out.println("wenn zuerst gecheckt werden soll");
+		}
+		
+		do
+		{
+			System.out.println("wenn zumindest einmal ausgeführt werden soll");
+		} while (false);
 	}
 
 }
