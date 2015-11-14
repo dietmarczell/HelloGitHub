@@ -32,6 +32,15 @@ public class DemoPorsche911 {
 		
 		
 		System.out.println("Auto der Marke "+porsche911.Brand+" und Farbe "+porsche911.Color);
+		
+		
+		Konto Mueller = new Konto();
+		Mueller.setInhaber("Max Mueller");
+		System.out.println("Kontostand:"+Mueller.getKontostand()+"€ ");
+		Mueller.aufbuchen(120.00);
+		System.out.println("Kontostand:"+Mueller.getKontostand()+"€ ");
+		Mueller.abbuchen(150.00);
+		System.out.println("Kontostand:"+Mueller.getKontostand()+"€ ");
 	}
 	
 }
