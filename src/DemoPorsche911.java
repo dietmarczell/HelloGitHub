@@ -19,6 +19,11 @@ public class DemoPorsche911 {
 		Franken.Betrag = 5000;
 		Franken.Zeichen = "CHR";
 		
+		porsche911.setCurrentGear(3);
+		porsche911.nextGear();
+		System.out.println(porsche911.getCurrentGear());
+		
+		
 		System.out.println("Auto der Marke "+porsche911.Brand+" und Farbe "+porsche911.Color);
 	}
 	
