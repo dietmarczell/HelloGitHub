@@ -19,8 +19,15 @@ public class DemoPorsche911 {
 		Franken.Betrag = 5000;
 		Franken.Zeichen = "CHR";
 		
+		System.out.println(porsche911.getCurrentGear());
+		System.out.println(porsche911.CurrentSpeed);
 		porsche911.setCurrentGear(3);
+		System.out.println(porsche911.getCurrentGear());
 		porsche911.nextGear();
+		porsche911.accelerate();
+		System.out.println(porsche911.CurrentSpeed);	
+		porsche911.accelerate(25);
+		System.out.println(porsche911.CurrentSpeed);
 		System.out.println(porsche911.getCurrentGear());
 		
 		
