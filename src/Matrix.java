@@ -4,7 +4,7 @@ public class Matrix {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		matrix(20);
+		matrix(11);
 		
 	}
 	

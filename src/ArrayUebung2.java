@@ -8,11 +8,13 @@ public class ArrayUebung2 {
 		
 		for(int i=0 ; i < elemente.length ; i++) {
 			elementeSumme = elementeSumme + elemente[i]; // int Array mit der Summe
-			if (containsNumber(elemente,elemente[i])) {
-				System.out.println("Zahl enthalten: "+elemente[i]);
-			}
 		}	
 		System.out.println("Summe: "+elementeSumme);
+		
+		int zahl = 10;
+		if (containsNumber(elemente,zahl)) {
+			System.out.println("Zahl enthalten: "+zahl);
+		}
 		
 	}
 	
