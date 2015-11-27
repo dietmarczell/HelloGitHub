@@ -34,9 +34,10 @@ public class DemoPorsche911 {
 		System.out.println("Auto der Marke "+porsche911.Brand+" und Farbe "+porsche911.Color);
 		
 		
-		Konto Mueller = new Konto();
+		Konto Mueller = new Konto("Max Mustermann");
+		System.out.println(Mueller.getInhaber()+" - Kontostand:"+Mueller.getKontostand()+"€ ");
 		Mueller.setInhaber("Max Mueller");
-		System.out.println("Kontostand:"+Mueller.getKontostand()+"€ ");
+		System.out.println(Mueller.getInhaber()+" - Kontostand:"+Mueller.getKontostand()+"€ ");
 		Mueller.aufbuchen(120.00);
 		System.out.println("Kontostand:"+Mueller.getKontostand()+"€ ");
 		Mueller.abbuchen(150.00);

@@ -4,13 +4,18 @@ public class Konto {
 	private String Kontoinhaber;
 	private double Kontostand;
 	
-	public Konto(){//String newInhaber){
-		//Kontoinhaber = newInhaber;
+	public Konto(String newInhaber){
+		setInhaber(newInhaber);
 		Kontostand = 0;
 	}
 	
 	public double getKontostand(){
 		return Kontostand;
+	}
+	
+	public String getInhaber()
+	{
+		return Kontoinhaber;
 	}
 	
 	public void setInhaber(String newInhaber){
