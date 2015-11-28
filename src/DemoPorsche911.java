@@ -2,7 +2,6 @@
 public class DemoPorsche911 {
 
 	public static void main(String[] args) {
-		int n;
 		Car porsche911 = new Car();
 		porsche911.Color = "rot";
 		porsche911.Brand = "Porsche";
