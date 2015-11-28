@@ -47,4 +47,22 @@ public class Bruch { // ACHTUNG: Zähler und Nenner sind versehentlich vertauscht
 		erg.print();
 		return erg;
 	}
+	
+	public Bruch kuerzen ()
+	{
+		Bruch erg = new Bruch(this.Nenner,this.Zaehler);
+		for (int j=0; j<5; j++)
+		{
+		  for (int i = 2; i<30; i++) 
+		  {
+			if ((this.Nenner%i==0) && (this.Zaehler%i==0))
+			{
+				erg.Nenner=this.Nenner/i;
+				erg.Zaehler=this.Zaehler/i;
+			}
+		  }
+		}
+		erg.print();
+		return erg;
+	}
 }
