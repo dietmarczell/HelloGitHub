@@ -1,13 +1,15 @@
 
-public class Bruch {
+public class Bruch { // ACHTUNG: Zähler und Nenner sind versehentlich vertauscht worden!
 
 	private int Nenner;
 	private int Zaehler;
+	public static int Counter = 0;
 	
 	public Bruch (int gotNenner, int gotZaehler)
 	{
 		this.Nenner = gotNenner; 
 		this.Zaehler = gotZaehler;
+		Counter++;
 	}
 	
 	public int getNenner()
@@ -32,17 +34,17 @@ public class Bruch {
 	
 	public Bruch multiplicate(Bruch b2)
 	{
-		b2.Nenner = Nenner * b2.Nenner;
-		b2.Zaehler = Zaehler * b2.Zaehler;
-		System.out.println(b2.Nenner+" / "+b2.Zaehler);
-		return b2;
+		//return new Bruch(this.Nenner * b2.getNenner(),this.Zaehler * b2.getZaehler()); // Kürzeste Lösung
+		Bruch erg = new Bruch(this.Nenner * b2.getNenner(),this.Zaehler * b2.getZaehler());
+		erg.print();
+		return erg;
 	}
 	
 	public Bruch multiplicate(Bruch b2, Bruch b3)
 	{
-		b2.Nenner = Nenner * b2.Nenner * b3.Nenner;
-		b2.Zaehler = Zaehler * b2.Zaehler * b3.Zaehler;
-		System.out.println(b2.Nenner+" / "+b2.Zaehler);
-		return b2;
+		//return new Bruch(this.Nenner * b2.getNenner() * b3.getNenner(),this.Zaehler * b2.getZaehler() * b3.getZaehler()); // Kürzeste Lösung
+		Bruch erg = new Bruch(this.Nenner * b2.getNenner() * b3.getNenner(),this.Zaehler * b2.getZaehler() * b3.getZaehler());
+		erg.print();
+		return erg;
 	}
 }
