@@ -21,14 +21,21 @@ public class FourWins {
 	
 	public void print()
 	{
-		for (int i =0; i<sizeX;i++)
+		System.out.print("y^");
+		for (int i=sizeY-1; i>=0;i--)
 		{
-			for (int j=0; j<sizeY;j++)
+			if (i<sizeY-1)
 			{
-				System.out.print(this.charArray[i][j]);
+				System.out.print(" |");
+			}
+			for (int j=0; j<sizeX;j++)
+			{
+				System.out.print(this.charArray[j][i]);
 			}
 			System.out.println();
 		}
+		System.out.println("  ---------->x");
+		System.out.println("");
 	}
 
 	public int getSizeX() {
@@ -63,6 +70,30 @@ public class FourWins {
 		{
 			return false;
 		}
+	}
+	
+	public boolean playerA(int x)
+	{
+		for (int i = 0; i < charArray.length; i++) {
+			if (this.charArray[x][i] == ' ')
+			{
+				this.charArray[x][i] = 'A';
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean playerB(int x)
+	{
+		for (int i = 0; i < charArray.length; i++) {
+			if (this.charArray[x][i] == ' ')
+			{
+				this.charArray[x][i] = 'B';
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	private char fourInRow()
@@ -141,18 +172,23 @@ public class FourWins {
 		return '-';
 	}
 	
+	
+	
 	public char winner()
 	{
 		char row = fourInRow();
 		char column = fourInColumn();
 		if (row == 'A' || row == 'B')
 		{
+			System.out.println("The winner is "+row+" !!!");
 			return row;
 		}
 		else if (column == 'A' || column == 'B')
 		{
+			System.out.println("The winner is "+column+" !!!");
 			return column;
 		}
+		
 		return '-';
 	}
 

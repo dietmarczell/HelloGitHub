@@ -4,24 +4,40 @@ public class DemoFourWins {
 
 	public static void main(String[] args) {
 
-		FourWins gewinnt = new FourWins(6,6);
+		FourWins gewinnt = new FourWins(6,7);
 		char win = ' ';
-		int i = 0;
-		int j = 0;
 		do
 		{
-			gewinnt.playerA(0,j);
+			gewinnt.playerA(0);
 			win=gewinnt.winner();
-			gewinnt.playerB(1,j);
+			gewinnt.playerB(1);
 			gewinnt.print();
 			win=gewinnt.winner();
-			gewinnt.playerA(i,1);
+			gewinnt.playerA(1);
 			win=gewinnt.winner();
-			gewinnt.playerB(i,2);
+			gewinnt.playerB(2);
 			gewinnt.print();
 			win=gewinnt.winner();
-			i++;
-			j++;
+			gewinnt.playerA(3);
+			win=gewinnt.winner();
+			gewinnt.playerB(4);
+			gewinnt.print();
+			win=gewinnt.winner();
+			gewinnt.playerA(5);
+			win=gewinnt.winner();
+			gewinnt.playerB(4);
+			gewinnt.print();
+			win=gewinnt.winner();
+			gewinnt.playerA(5);
+			win=gewinnt.winner();
+			gewinnt.playerB(5);
+			gewinnt.print();
+			win=gewinnt.winner();
+			gewinnt.playerA(3);
+			win=gewinnt.winner();
+			gewinnt.playerB(2);
+			gewinnt.print();
+			win=gewinnt.winner();
 		}
 		while(win != 'A' && win != 'B');
 		System.out.println("The winner is "+win+" !!!");

@@ -22,7 +22,7 @@ public class Zinsen {
 	public double berechnen()
 	{
 		System.out.println(this.Kapital+" "+this.Tage+" "+this.Zinssatz);
-		return (this.Kapital*this.Tage*this.Zinssatz/36000);
+		return (this.Kapital*this.Tage*this.Zinssatz/36000.0);
 	}
 	
 	public double berechnen(double gotKapital, int gotTage, double gotZinssatz)

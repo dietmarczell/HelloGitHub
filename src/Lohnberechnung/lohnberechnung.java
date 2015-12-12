@@ -69,7 +69,7 @@ public class lohnberechnung {
 			newGehalt=10000; }
 		if (newGehalt <= 10000) {
 			steuer = steuer + newGehalt *0.1;
-			newGehalt=30000; }
+		}
 		return (((this.gehalt*12*0.8)-steuer)/12);
 	}
 	
