@@ -8,7 +8,6 @@ public class Employee {
 	private String department;
 	
 	public Employee(int empNumber, String name, double salary, String department) {
-		super();
 		this.empNumber = empNumber;
 		this.name = name;
 		this.salary = salary;
@@ -21,6 +20,28 @@ public class Employee {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + empNumber;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (empNumber != other.empNumber)
+			return false;
+		return true;
 	}
 
 	public String getDepartment() {
@@ -40,8 +61,7 @@ public class Employee {
 	}
 
 	public String toString() {
-		return "Employee [empNumber=" + empNumber + ", name=" + name + ", salary=" + salary + ", department="
-				+ department + "]";
+		return "Employee [empNumber=" + empNumber + ", name=" + name + ", salary=" + salary + ", department=" + department + "]";
 	}
 	
 	

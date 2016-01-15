@@ -3,7 +3,7 @@ package org.campus02.emp;
 import java.util.ArrayList;
 
 public class EmployeeManager {
-	private ArrayList<Employee> employees;
+	private ArrayList<Employee> employees = new ArrayList<>();
 	
 	public void addEmployee(Employee emp) {
 		employees.add(emp);
@@ -16,6 +16,14 @@ public class EmployeeManager {
 			}
 		}
 		return null;
+	}
+	
+	public Employee find(Employee e) {
+		int index = employees.indexOf(e);
+		if (index == -1){
+			return null;
+		}
+		return employees.get(index);
 	}
 	
 	public Employee  findByMaxSalary() {
