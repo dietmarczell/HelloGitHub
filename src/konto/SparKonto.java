@@ -8,12 +8,6 @@ public class SparKonto extends Konto {
 	}
 
 	@Override
-	public void einzahlen(double wert)
-	{
-		this.kontostand =+ wert;
-	}
-
-	@Override
 	public void auszahlen(double wert)
 	{
 		double new_konto = this.kontostand;

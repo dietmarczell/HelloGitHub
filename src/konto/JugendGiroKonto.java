@@ -11,12 +11,6 @@ public class JugendGiroKonto extends GiroKonto {
 	}
 	
 	@Override
-	public void einzahlen(double wert)
-	{
-		this.kontostand =+ wert;
-	}
-	
-	@Override
 	public void auszahlen(double wert)
 	{
 		double new_konto = this.kontostand;
