@@ -3,8 +3,6 @@ package logisticmanager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import konto.Konto;
-
 public class Demo {
 
 	public static void main(String[] args) {
