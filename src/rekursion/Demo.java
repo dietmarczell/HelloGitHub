@@ -21,6 +21,8 @@ public class Demo {
 		linz.addNachbar(wien);
 		
 		System.out.println(hasCircle(graz));
+		
+		//System.out.println(getHops(graz, linz));
 	}
 	
 	public static boolean hasCircle(Ort o)
@@ -49,5 +51,27 @@ public class Demo {
 		}
 		return false;
 	}
+
+	/*public static Integer getHops (Ort start, Ort ziel)
+	{
+		if(start.equals(ziel))
+		{
+			return counter;
+		}
+		for (Ort ort : start.getNachbarn()) 
+		{
+			if(ort.equals(ziel))
+			{
+				counter++;
+				return getHops(ort,ziel);
+			}
+			if(ort.getNachbarn().contains(ziel))
+			{
+				counter=counter+2;
+				return counter;
+			}
+		}
+		return counter;
+	}*/
 
 }
