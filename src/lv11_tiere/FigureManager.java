@@ -7,6 +7,10 @@ public class FigureManager {
 
 	protected ArrayList<Figure> FigureList;
 
+	public static final String klein = "Klein";
+	public static final String mittel = "Mittel";
+	public static final String gross = "Groﬂ";
+	
 	public FigureManager(ArrayList<Figure> figureList) {
 		FigureList = figureList;
 	}
@@ -43,24 +47,24 @@ public class FigureManager {
 		for (Figure figure : FigureList) {
 			if (figure.getArea() <= 1000.0)
 			{
-				if ( Size.containsKey("Klein"))
-					Size.put("Klein", Size.get("Klein")+1);
+				if ( Size.containsKey(klein))
+					Size.put(klein, Size.get(klein)+figure.getArea());
 				else
-					Size.put("Klein", 1.0);
+					Size.put(klein, figure.getArea());
 			}
 			else if (figure.getArea() > 1000.0 && figure.getArea() <= 1499.0)
 			{
-				if ( Size.containsKey("Mittel"))
-					Size.put("Mittel", Size.get("Mittel")+1);
+				if ( Size.containsKey(mittel))
+					Size.put(mittel, Size.get(mittel)+figure.getArea());
 				else
-					Size.put("Mittel", 1.0);
+					Size.put(mittel, figure.getArea());
 			}
 			else if (figure.getArea() > 1499.0)
 			{
-				if ( Size.containsKey("Groﬂ"))
-					Size.put("Groﬂ", Size.get("Groﬂ")+1);
+				if ( Size.containsKey(gross))
+					Size.put(gross, Size.get(gross)+figure.getArea());
 				else
-					Size.put("Groﬂ", 1.0);
+					Size.put(gross, figure.getArea());
 			}
 		}
 		return Size;

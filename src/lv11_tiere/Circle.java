@@ -11,13 +11,13 @@ public class Circle extends Figure {
 	@Override
 	protected double getPerimeter() {
 		// TODO Auto-generated method stub
-		return (2*radius*3.14159);
+		return (2*radius*Math.PI);
 	}
 
 	@Override
 	protected double getArea() {
 		// TODO Auto-generated method stub
-		return (radius*radius*3.14159);
+		return (radius*radius*Math.PI);
 	}
 
 }

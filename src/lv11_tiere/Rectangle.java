@@ -21,7 +21,4 @@ public class Rectangle extends Figure {
 		// TODO Auto-generated method stub
 		return length*width*1.0;
 	}
-	
-	
-
 }
