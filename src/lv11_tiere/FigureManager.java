@@ -35,10 +35,10 @@ public class FigureManager {
 		double average_area = 0.0;
 		int counter = 0;
 		for (Figure figure : FigureList) {
-			average_area =+ figure.getArea();
+			average_area += figure.getArea();
 			counter++;
 		}
-		return average_area/counter;
+		return average_area/FigureList.size();
 	}
 
 	public HashMap<String, Double> getAreaBySizeCategories()

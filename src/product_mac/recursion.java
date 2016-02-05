@@ -6,11 +6,15 @@ public class recursion {
 		// TODO Auto-generated method stub
 		
 		product mainboard = new product("mainboard", 5);
-		product ram = new product("ram", 10);
+		product ram = new product("ram", 5);
 		product mac = new product("Mac", 10);
+		product chasis = new product("case", 5);
 		
-		mac.add(ram);
+		mac.add(chasis);
 		mac.add(mainboard);
+		
+		mainboard.add(ram);
+		mainboard.add(ram);
 		
 		System.out.println(mac.getPrice());
 		

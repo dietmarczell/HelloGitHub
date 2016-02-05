@@ -13,13 +13,13 @@ public class checkPalindrom {
 		char first_char = Character.toLowerCase(input.charAt(0));
 		char last_char = Character.toLowerCase(input.charAt(input.length()-1));
 		
-		if (input.charAt(0) == ' ')
+		if (first_char == ' ')
 		{
 			input = input.substring(1, input.length()-1);
 			return check(input);
 			
 		}
-		if (input.charAt(input.length()-1) == ' ')
+		if (last_char == ' ')
 		{
 			input = input.substring(0, input.length()-1);
 			return check(input);
